@@ -1,0 +1,35 @@
+<div class="card" style="height: calc(100% - 10px)">
+    <div class="card-body text-center">
+        <div class="h-100 d-flex align-items-center">
+            <div class="w-100">
+                <h5>
+                    <!--<a to={"/campionato/" + props.campionato.idc} style="color: black">-->
+                    <a>
+                        {{partita.campionato.nome}}
+                    </a>
+                </h5>
+                <h6>
+                    {{partita.campionato.fase}}
+                </h6>
+                <h6 class="mb-3">
+                    {{partita.campionato.giornata}}
+                </h6>
+                <h5>
+                    {{partita.data}} - {{partita.ora}}
+                </h5>
+                <h6>
+                    {{partita.luogo}}
+                </h6>
+                <hr class="my-2"/>
+                <table class="table m-0 tbl-referees">
+                    <tbody>
+                        <tr *ngFor="let arbitro of partita.arbitri">
+                            <td>{{arbitro.ruolo}}</td>
+                            <td>{{arbitro.nome}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

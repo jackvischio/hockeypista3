@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="mb-3">Azioni di gioco:</h5>
+        <div class="actions-div">
+            <div class="action-elem action-elem-secondary" *ngFor="let azione of azioni">
+                <span class="badge bg-secondary sora" *ngIf="azione['badge'] !== undefined">
+                    {{azione['badge']}}
+                </span>
+                <h5>
+                    {{azione['titolo']}}
+                </h5>
+                <p *ngIf="azione['giocatore'] !== undefined">
+                    {{azione['giocatore']}}
+                </p>
+                <p style="font-size: 0.8em">
+                    {{azione['tempo']}}
+                </p>
+                <img [src]="azione['logo']" alt="" class="action"/>
+            </div>
+        </div>
+    </div>
+</div>

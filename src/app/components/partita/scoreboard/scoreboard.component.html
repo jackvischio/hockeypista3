@@ -1,0 +1,62 @@
+<div class="card" style="height: calc(100% - 10px)">
+    <div class="card-body">
+        <div class="w-100 h-100 text-center d-flex align-items-center">
+            <table class="w-100">
+                <tbody>
+                    <tr>
+                        <td width="35%">
+                            <img [src]="partita.squadra1.logo" [alt]="partita.squadra1.abbr" class="logoSquadra"/>
+                            <a style="color: black">
+                                <h5 class="SquadraName mt-3">
+                                    {{ partita.squadra1.nome }}
+                                </h5>
+                            </a>
+                        </td>
+                        <td width="30%">
+                            <h1>
+                                <span class="title-badge bg-success text-light">
+                                    {{ partita.risultato }}
+                                </span>
+                            </h1>
+                            <h4>
+                                <span class="title-badge bg-secondary text-light"
+                                    style="margin-top: 10px; font-weight: 400">
+                                    {{ partita.tempo }}
+                                </span>
+                            </h4>
+                            <br />
+                            <!--{
+                                (props.currentTimestamp !== undefined && props.currentTimestamp !== "") ?
+                                    <h6 class="title-badge badge-secondary" style={{ marginTop: "10px", fontWeight: "400" }}> {props.currentTimestamp} </h6> : ""
+                            }-->
+                        </td>
+                        <td width="35%">
+                            <img [src]="partita.squadra2.logo" [alt]="partita.squadra2.abbr" class="logoSquadra"/>
+                            <a style="color: black">
+                                <h5 class="SquadraName mt-3">
+                                    {{ partita.squadra2.nome }}
+                                </h5>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr height="20px">
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td width="35%">
+                            <h4 class="sora">
+                                {{ partita.falli1 }}
+                            </h4>
+                        </td>
+                        <td width="30%"> falli </td>
+                        <td width="35%">
+                            <h4 class="sora">
+                                {{ partita.falli2 }}
+                            </h4>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
