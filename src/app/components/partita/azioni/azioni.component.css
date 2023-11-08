@@ -1,43 +1,25 @@
-.action-elem {
-    padding: 0.35rem 0.6rem;
-    margin-bottom: 4px;
-    border: 1px solid #eee;
-    border-right-width: 0.25rem;
-    border-radius: 0.4rem;
-    position: relative;
-    font-weight: 400;
-  }
-  
-  .action-elem > p {
-    margin: 0;
-    font-size: 90%;
-  }
-  
-  .action-elem > h5 {
-    margin: 0;
-    margin-bottom: 2px;
-    font-size: 1.15em;
-    font-weight: 600;
-  }
-  
-  .action-elem > span.badge {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    font-size: 80%;
-  }
-  
-  .action-elem > img {
-    position: absolute;
-    bottom: 0.5rem;
-    right: 0.5rem;
-    height: 35px;
-    border-radius: 0.25rem;
-    width: auto;
-  }
-  
-  .actions-div {
-    max-height: 95vh;
-    overflow: auto;
-    scrollbar-width: 5px;
-  }
+.action-time {
+	font-size: 0.75em;
+}
+
+.action-image {
+	width: 22px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.action-text > div > p {
+	margin: 0;
+	font-weight: 600;
+	line-height: 0.95em;
+}
+
+.action-text > p {
+	margin: 0;
+	font-size: 0.9em;
+}
+
+.action-badge {
+	padding: 3px 6px;
+	margin: 0 10px;
+}

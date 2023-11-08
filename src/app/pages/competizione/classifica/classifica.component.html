@@ -1,0 +1,129 @@
+<div class="card card-body p-1 m-0">
+    <div class="mb-1">
+        <div class="d-flex flex-row justify-content-between">
+            <div class="squadra">
+                <span (click)="showLegenda(true)" class="cursor-pointer text-muted ps-2">
+                    <i class="fas fa-info-circle"></i>
+                </span>
+            </div>
+            <div class="punti">
+                <div class="colx c">
+                    g
+                </div>
+                <div class="colx x text-muted">
+                    v &#183; p &#183; s
+                </div>
+                <div class="colx d">
+                    d.r.
+                </div>
+                <div class="colx y">
+                    pti
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="classifica" *ngFor="let elem of classifica; let i=index">
+        <div class="d-flex flex-row justify-content-between">
+            <div class="squadra">
+                <div class="stato" [class]="getStato(i)"></div>
+                <span class="posiz"> {{ i+1 }} </span>
+                <img [src]="_img + elem.squadraObj.logo" />
+                <span class="d-block d-md-none">
+                    {{ elem.squadraObj.abbr }}
+                </span>
+                <span class="d-none d-md-block">
+                    {{ elem.squadraObj.nome | titlecase }}
+                </span>
+            </div>
+
+            <div class="punti">
+                <div class="colx c">
+                    {{ elem.partite }}
+                </div>
+                <div class="colx a text-muted">
+                    {{ elem.vittorie }}
+                </div>
+                <div class="colx a text-muted">
+                    {{ elem.pareggi }}
+                </div>
+                <div class="colx a text-muted">
+                    {{ elem.sconfitte }}
+                </div>
+                <div class="colx d">
+                    {{ elem.reti_diff }}
+                </div>
+                <div class="colx b">
+                    <span class="badge bg-info">
+                        {{ elem.punti }}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- legenda -->
+<div class="modal fade show" id="modalLegenda" tabindex="-1" role="dialog" *ngIf="legenda">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content shadow">
+            <div class="modal-body py-5 text-center">
+                <table class="table table-sm">
+                    <tbody>
+                        <tr>
+                            <th scope="row">g</th>
+                            <td>Partite giocate</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">v</th>
+                            <td>Vittorie</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">p</th>
+                            <td>Pareggi</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">s</th>
+                            <td>Sconfitte</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">d.r.</th>
+                            <td>Differenza reti</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">pti</th>
+                            <td>Punti</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-sm">
+                    <thead></thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <span class="badge bg-success"> &nbsp; </span>
+                            </th>
+                            <td>Accesso diretto al Play-off</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <span class="badge bg-info"> &nbsp; </span>
+                            </th>
+                            <td>Preliminari Play-Off</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <span class="badge bg-danger"> &nbsp; </span>
+                            </th>
+                            <td>Play.Out</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button class="btn btn-sm btn-outline-warning" (click)="showLegenda(false)">
+                    chiudi
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

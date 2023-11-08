@@ -25,3 +25,7 @@ body {
     margin-bottom: 7px;
     margin-top: 7px;
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}

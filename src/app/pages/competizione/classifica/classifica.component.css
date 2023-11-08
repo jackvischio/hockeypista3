@@ -1,0 +1,95 @@
+.classifica {
+    padding: 5px 2px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.posiz {
+    padding-right: 3px;
+    padding-left: 3px;
+    font-weight: bold;
+    width: 35px;
+    text-align: center;
+}
+
+.squadra {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: calc(100% - 175px);
+}
+
+.squadra > img {
+    width: 30px;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.stato {
+    height: 100%;
+    border-radius: 2px;
+    width: 4px;
+    background-color: #0000;
+}
+
+.punti {
+    width: 175px !important;
+    padding: 0;
+}
+
+.punti > .colx {
+    padding: 0;
+    align-items: center;
+    display: inline-block;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.punti > .a {
+    font-size: 0.9em;
+    line-height: 0.9em;
+    width: 20px;
+    margin: 0 auto;
+}
+
+.punti > .b {
+    margin-left: 7px;
+    font-size: 1.1em;
+    width: 35px;
+}
+
+.punti > .c {
+    font-size: 0.9em;
+    line-height: 0.9em;
+    width: 25px;
+    margin-right: 7px;
+}
+
+.punti > .d {
+    font-size: 0.9em;
+    line-height: 0.9em;
+    width: 28px;
+    margin-left: 7px;
+}
+
+.punti > .x {
+    font-size: 0.9em;
+    line-height: 0.9em;
+    width: 60px;
+}
+
+.punti > .y {
+    margin-left: 7px;
+    font-size: 0.9em;
+    line-height: 0.9em;
+    width: 35px;
+}
+
+.modal {
+    display: block !important;
+}
+.fade {
+    opacity: 1;
+    background: rgba(0,0,0,0.3);
+}
+

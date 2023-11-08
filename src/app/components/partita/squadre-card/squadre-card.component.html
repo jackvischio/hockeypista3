@@ -1,0 +1,64 @@
+<!-- <div class="row">
+    <div class="col-6 p-0 pe-1">
+        <div class="card m-0 shadow cursor-pointer" (click)="set1()" [ngClass]="{'selected': squadra == partita.squadra1}">
+            <div class="card-body p-2 px-3 text-center">
+                <div class="d-flex flex-row align-items-center">
+                    <img [src]="partita.squadra1.logo" class="logo"/>
+                    <h3 class="m-0 px-3 sora"> {{ partita.squadra1.abbr }} </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 p-0 ps-1">
+        <div class="card m-0 shadow cursor-pointer" (click)="set2()" [ngClass]="{'selected': squadra == partita.squadra2}">
+            <div class="card-body p-2 px-3 text-center">
+                <div class="d-flex flex-row-reverse align-items-center">
+                    <img [src]="partita.squadra2.logo" class="logo"/>
+                    <h3 class="m-0 px-3 sora"> {{ partita.squadra2.abbr }} </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="card m-0 shadow text-center">
+    <div class="card-body p-2">
+        <div class="btn-group" role="group">
+            <button
+                class="btn btn-scelta"
+                [ngClass]="{'btn-outline-light': squadra == partita.squadra2, 'btn-light': squadra == partita.squadra1}"
+                (click)="set1()"
+            >
+                <div class="d-flex flex-row align-items-center">
+                    <div class="rounded logo">
+                        <img [src]="partita.squadra1.logo"/>
+                    </div>
+                    <h5 class="m-0 px-3 sora"> {{ partita.squadra1.abbr }} </h5>
+                </div>
+            </button>
+
+            <button
+                class="btn btn-sm btn-scelta"
+                [ngClass]="{'btn-outline-light': squadra == partita.squadra1, 'btn-light': squadra == partita.squadra2}"
+                (click)="set2()"
+            >
+                <div class="d-flex flex-row-reverse align-items-center">
+                    <div class="rounded logo">
+                        <img [src]="partita.squadra2.logo"/>
+                    </div>
+                    <h5 class="m-0 px-3 sora"> {{ partita.squadra2.abbr }} </h5>
+                </div>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div id="target"></div>
+
+<div class="card m-0 mt-2 mb-4 shadow">
+    <div class="card-body p-2">
+        <partita-squadra
+            [squadra]="squadra"
+        ></partita-squadra>
+    </div>
+</div>

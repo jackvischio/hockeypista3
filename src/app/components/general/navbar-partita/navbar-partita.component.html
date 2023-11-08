@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg bg-white sticky-top shadow py-1">
+    <div class="container-fluid">
+        <div class="row w-100 align-items-center">
+            <!-- desktop -->
+            <div class="col-12 col-md-6 col-lg-8 col-xl-9 p-0">
+                <div class="d-flex flex-row align-items-center">
+                    <button class="btn" style="font-size: 1.7em;" routerLink="/competizione/5">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <span class="navbar-brand mb-0 ps-2 h1">
+                        <strong>{{ nome }}</strong>
+                    </span>
+                </div>
+            </div>
+            <!-- both -->
+            <div class="col-12 mx-0 px-0 mt-1 d-md-none">
+                <div class="row text-center align-items-start">
+                    <div class="col-3 mx-0 px-0">
+                        <button 
+                            class="btn btn-menu"
+                            [ngClass]="{'btn-menu-active border-warning': currentTab == 0}"
+                            (click)="changeTab(0)"
+                        >
+                            riepilogo
+                        </button>
+                    </div>
+                    <div class="col-3 mx-0 px-0">
+                        <button 
+                            class="btn btn-menu"
+                            [ngClass]="{'btn-menu-active border-warning': currentTab == 2}"
+                            (click)="changeTab(2)"
+                        >
+                            azioni
+                        </button>
+                    </div>
+                    <div class="col-3 mx-0 px-0">
+                        <button 
+                            class="btn btn-menu"
+                            [ngClass]="{'btn-menu-active border-warning': currentTab == 1}"
+                            (click)="changeTab(1)"
+                        >
+                            formazioni
+                        </button>
+                    </div>
+                    <div class="col-3 mx-0 px-0">
+                        <button 
+                            class="btn btn-menu"
+                            [ngClass]="{'btn-menu-active border-warning': currentTab == 3}"
+                            (click)="changeTab(3)"
+                        >
+                            news
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+

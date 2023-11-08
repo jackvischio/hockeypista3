@@ -1,0 +1,16 @@
+<div class="accordion rounded" id="accordionExample">
+    <div class="accordion-item mb-1 rounded shadow" *ngFor="let gior of giornate; let i = index">
+        <h2 class="accordion-header rounded">
+            <button class="accordion-button rounded" [ngClass]="{'collapsed': i!=0}" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse'+i"
+                [attr.aria-expanded]="i == 0 ? 'true' : 'false'" [attr.aria-controls]="'#collapse'+i">
+                <span id="title">{{ gior.nome }}</span>
+                <span class="text-muted">{{ gior.data }}</span>
+            </button>
+        </h2>
+        <div [id]="'collapse'+i" class="accordion-collapse collapse" [ngClass]="{'show': i==0}" data-bs-parent="#accordionExample">
+            <div class="accordion-body partita" *ngFor="let partita of gior.partite">
+                <app-partita-calendario [partita]="partita"></app-partita-calendario>
+            </div>
+        </div>
+    </div>
+</div>

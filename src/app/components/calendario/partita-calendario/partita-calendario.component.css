@@ -1,0 +1,8 @@
+.linkable {
+    cursor: pointer;
+}
+
+.linkable:hover,
+.linkable:focus {
+	background-color: #eee;
+}

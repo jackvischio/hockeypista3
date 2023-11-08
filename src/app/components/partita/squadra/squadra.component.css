@@ -12,7 +12,7 @@
 .table-match > thead > tr > th.col7 {
   text-align: center;
   width: 7%;
-  min-width: 34px;
+  min-width: 32px;
 }
 
 .table-match-striped {
@@ -29,4 +29,13 @@
 .table-match > thead > tr > th {
   padding: 2px 3px;
   vertical-align: middle;
+  font-size: 0.9em;
+}
+
+.table-match {
+  margin-bottom: 0;
+}
+
+.sora {
+  font-family: "Sora", sans-serif;
 }

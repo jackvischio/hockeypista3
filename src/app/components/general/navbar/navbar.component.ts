@@ -6,13 +6,5 @@ import { Component } from '@angular/core';
 	styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-	loggedIn = true
-
-	login() {
-		this.loggedIn = true;
-	}
-
-	logout() {
-		this.loggedIn = false;
-	}
+	title = "HockeyPista 3.0"
 }

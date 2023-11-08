@@ -1,0 +1,28 @@
+.squadre {
+    height: calc(100vh - 95px);
+    overflow-y: scroll;
+    padding: 0;
+}
+
+.calendario {
+    height: calc(100vh - 95px);
+    overflow-y: scroll;
+    padding: 0;
+}
+
+.classifica {
+    height: calc(100vh - 95px);
+    overflow-y: scroll;
+    padding: 0;
+    padding-left: 14px;
+    padding-right: 7px;
+}
+
+.marcatori {
+    height: calc(100vh - 95px);
+    overflow-y: scroll;
+    padding: 0;
+    padding-left: 7px;
+    padding-right: 14px;
+}
+

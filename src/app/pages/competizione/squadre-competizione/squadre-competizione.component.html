@@ -1,0 +1,10 @@
+<div class="row p-0">
+    <div class="p-0 mb-1" *ngFor="let squadra of squadre">
+        <div class="card card-body squadra shadow p-2">
+            <div class="d-flex flex-row align-items-center">
+                <img [src]="_img + squadra.logo"/>
+                <h6>{{ squadra.nome ? (squadra.nome | titlecase) : squadra.abbr }}</h6>
+            </div>
+        </div>
+    </div>
+</div>

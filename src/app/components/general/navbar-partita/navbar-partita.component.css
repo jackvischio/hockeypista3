@@ -1,0 +1,11 @@
+.btn-menu {
+    padding: 0;
+    text-align: center;
+    border: 0;
+    width: 100%;
+    border-bottom: 3px solid #fff0;
+}
+
+.btn-menu-active {
+    font-weight: 700;
+}

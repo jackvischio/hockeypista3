@@ -1,0 +1,63 @@
+<app-navbar></app-navbar>
+
+<ng-template #lista>
+    <ul>
+        <li *ngFor="let nome of nomi" class="cursor-pointer" (click)="stat(nome)">
+            {{ nome }}
+        </li>
+    </ul>
+</ng-template>
+
+<ng-template #graph>
+    <i>Seleziona un arbitro per visualizzare le statistiche</i>
+
+    <div *ngFor="let st of stats">
+        {{ st.categoria }} - {{ st.count }}
+    </div>
+
+    <div class="grafico text-center">
+        <div class="content">
+            <div class="bars" *ngFor="let item of grafico">
+                <span>{{item.value}}</span>
+                <div class="bar" [style.background-color]="item.color" [style.height]='item.size'></div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="legends">
+            <span *ngFor="let item of grafico">{{item.legend}}</span>
+        </div>
+    </div>
+</ng-template>
+
+<!-- desktop view -->
+<div class="container d-none d-md-block">
+    <div class="row mt-3">
+        <div class="col-4 p-0">
+            <div class="card">
+                <div class="card-body">
+                    <ng-template [ngTemplateOutlet]="lista"></ng-template>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-8 p-0">
+            <div class="card">
+                <div class="card-body">
+                    <ng-template [ngTemplateOutlet]="graph"></ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper py-3 d-block d-md-none">
+    <div class="card card-body">
+        <div style="max-height: 200px; overflow-y: scroll;">
+            <ng-template [ngTemplateOutlet]="lista"></ng-template>
+        </div>
+    </div>
+
+    <div class="card card-body">
+        <ng-template [ngTemplateOutlet]="graph"></ng-template>
+    </div>
+</div>

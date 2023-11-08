@@ -1,0 +1,21 @@
+.squadra {
+	cursor: pointer;
+	height: 100%;
+	margin: 0;
+}
+
+.squadra > div > h6 {
+	margin: 0;
+	padding-left: 10px;
+	font-size: 1.1em;
+}
+
+.squadra > div > img {
+	width: 45px;
+	margin: 0;
+}
+
+.squadra:hover,
+.squadra:focus {
+	background-color: #eee;
+}

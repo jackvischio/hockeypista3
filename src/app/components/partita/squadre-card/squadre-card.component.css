@@ -1,0 +1,35 @@
+.logo {
+    background-color: white;
+    padding: 3px;
+}
+.logo > img {
+    width: 25px;
+}
+
+.sora {
+    font-family: "Sora", sans-serif;
+}
+
+.selected {
+    background-color: rgb(255, 193, 7);
+}
+
+.btn-scelta {
+    width: 140px;
+    padding: 6px;
+    border-radius: 12px;
+}
+
+.btn-light,
+.btn-outline-light {
+    border-color: #6c757d !important;
+    color: #6c757d !important;
+}
+
+.btn-light,
+.btn-light:focus,
+.btn-light:hover,
+.btn-light:active {
+   background-color: #dfdfdf;
+   color: black !important;
+}

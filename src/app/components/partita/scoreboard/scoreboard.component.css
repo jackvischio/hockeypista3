@@ -1,6 +1,7 @@
-.SquadraName {
+.squadra-name {
     font-family: "Sora", sans-serif;
-    font-size: 2em;
+    line-height: 0.8em;
+    color: black;
 }
 
 .title-badge {
@@ -19,8 +20,8 @@
     font-family: "Sora", sans-serif;
 }
 
-.logoSquadra {
-    width: 100%;
+.squadra-logo {
+    width: 65%;
     max-width: 120px;
     height: auto;
 }

@@ -1,0 +1,53 @@
+.grafico .content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 160px;
+}
+
+.grafico .content span{
+    font-size: 13px;
+    color: #707070;
+}
+
+.grafico .line{
+    background-color: #CCCCCC;
+    width: 100%;
+    height: 1px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+
+.grafico .legends{
+    display: flex;
+    flex-direction: row;
+    color: #707070;
+    font-size: 12px;
+    text-align: center;
+}
+
+.grafico .legends span{
+    width: 37px;
+    margin: 0 5px;
+}
+
+.grafico .bars{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.grafico .bar{
+    width: 37px;
+    min-height: 2px;
+    margin:0 5px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.grafico .bar:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.20);
+}

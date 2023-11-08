@@ -1,0 +1,19 @@
+.title-badge {
+	display: inline-block;
+	margin: 0 auto;
+	font-family: "Sora", sans-serif;
+	padding: 0.25em 0.75em;
+	font-weight: 600;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: 0.25rem;
+}
+
+.btn-scelta {
+    width: 90px;
+}
+
+img {
+    width: 50px;
+}

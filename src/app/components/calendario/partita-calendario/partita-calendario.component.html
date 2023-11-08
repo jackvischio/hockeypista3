@@ -1,0 +1,26 @@
+<div class="text-center py-1" [ngClass]="{'linkable': giocata}" [routerLink]="['/partita/' + partita.idp]">
+    <div class="row align-items-center">
+        <div class="col-2 text-start">
+            <p style="font-size: 0.7em;" class="text-muted m-0">
+                {{ partita.data | slice:0:5 }}
+            </p>
+            <p style="font-size: 0.7em;" class="text-muted m-0">
+                {{ partita.ora }}
+            </p>
+        </div>
+        <div class="col text-end">
+            {{ partita.squadra1obj.abbr }}
+            <img [src]="_img + partita.squadra1obj.logo" height="30px" class="ps-1"/>
+        </div>
+        <div class="col text-center">
+            {{ partita.risultato }}
+        </div>
+        <div class="col p-0">
+            <img [src]="_img + partita.squadra2obj.logo" height="30px" class="pe-1"/>
+            {{ partita.squadra2obj.abbr }}
+        </div>
+        <div class="col-2 text-end">
+            <span class="badge bg-light text-dark" *ngIf="giocata">F</span>
+        </div>
+    </div>
+</div>

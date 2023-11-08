@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg bg-white sticky-top shadow py-1">
+    <div class="container-fluid">
+        <div class="row w-100 align-items-center">
+            <!-- desktop -->
+            <div class="col-12 col-md-6 col-lg-8 col-xl-9 d-none d-md-block">
+                <a class="navbar-brand mb-0 h1" style="font-size: 1.3em" routerLink="/home">
+                    <img src="assets/logo_512.jpg" width="36" height="30"
+                        class="d-inline-block align-text-top pe-2">
+                    <strong>{{ title }}</strong>
+                </a>
+            </div>
+            <!-- mobile -->
+            <div class="col-12 col-md-6 col-lg-8 col-xl-9 d-block d-md-none text-center">
+                <a class="navbar-brand mb-0 h1 text-muted" style="font-size: 1.3em" routerLink="/home">
+                    <strong>{{ title }}</strong>
+                </a>
+            </div>
+            <!-- both -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 mx-0 px-0 mt-1 mt-md-0">
+                <div class="row text-center">
+                    <div class="col-3 mx-0 px-0">
+                        <a role="button" class="btn w-100 pt-0" routerLinkActive="btn-warning" routerLink="/home">
+                            <div>
+                                <p style="font-size: 1.2em; margin: 0;"><i class="fa fa-clock"></i></p>
+                                <p style="font-size: 0.75em; margin: 0; line-height: 0.80em;">partite</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-3 mx-0 px-0">
+                        <a role="button" class="btn w-100 pt-0" routerLinkActive="btn-warning" routerLink="/campionati">
+                            <div>
+                                <p style="font-size: 1.2em; margin: 0"><i class="fa fa-trophy"></i></p>
+                                <p style="font-size: 0.75em; margin: 0; line-height: 0.80em;">campionati</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-3 mx-0 px-0">
+                        <a role="button" class="btn w-100 pt-0" routerLinkActive="btn-warning" routerLink="/home-2">
+                            <div>
+                                <p style="font-size: 1.2em; margin: 0"><i class="fa fa-star"></i></p>
+                                <p style="font-size: 0.75em; margin: 0; line-height: 0.80em;">seguiti</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-3 mx-0 px-0">
+                        <a role="button" class="btn w-100 pt-0" routerLinkActive="btn-warning" routerLink="/menu">
+                            <div>
+                                <p style="font-size: 1.2em; margin: 0"><i class="fa fa-bars"></i></p>
+                                <p style="font-size: 0.75em; margin: 0; line-height: 0.80em;">menu</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+

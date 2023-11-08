@@ -1,0 +1,66 @@
+<div class="card m-0 mb-4 shadow">
+    <div class="card-body p-0">
+        <div class="row text-center align-items-center p-2">
+            <div class="col-4">
+                <img [src]="partita.squadra1.logo"/>
+            </div>
+            <div class="col-4">
+                <h4 class="title-badge bg-success text-light">
+                    {{ partita.gol1 }} - {{ partita.gol2 }}
+                </h4>
+            </div>
+            <div class="col-4">
+                <img [src]="partita.squadra2.logo"/>
+            </div>
+        </div>
+
+        <div class="text-center my-2">
+            <div class="btn-group" role="group">
+                <button
+                    class="btn btn-sm btn-scelta"
+                    [ngClass]="{'btn-outline-secondary': stile != 0, 'btn-secondary': stile == 0}"
+                    (click)="stile = 0"
+                >
+                    timeline
+                </button>
+
+                <button
+                    class="btn btn-sm btn-scelta"
+                    [ngClass]="{'btn-outline-secondary': stile != 1, 'btn-secondary': stile == 1}"
+                    (click)="stile = 1"
+                >
+                    principali
+                </button>
+
+                <button
+                    class="btn btn-sm btn-scelta"
+                    [ngClass]="{'btn-outline-secondary': stile != 2, 'btn-secondary': stile == 2}"
+                    (click)="stile = 2"
+                >
+                    tutte
+                </button>
+            </div>
+        </div>
+
+        <div style="height: 80vh" class="p-2" *ngIf="stile == 0">
+            <partita-azioni-timeline
+                [partita]="partita"
+            ></partita-azioni-timeline>
+
+        </div>
+
+        <div class="p-2" *ngIf="stile != 0">
+            <partita-azioni-full
+                [partita]="partita"
+                [full]="false"
+                *ngIf="stile == 1"
+            ></partita-azioni-full>
+
+            <partita-azioni-full
+                [partita]="partita"
+                [full]="true"
+                *ngIf="stile == 2"
+            ></partita-azioni-full>
+        </div>
+    </div>
+</div>
